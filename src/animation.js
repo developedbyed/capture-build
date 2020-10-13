@@ -1,21 +1,18 @@
 export const pageAnimation = {
   hidden: {
     opacity: 0,
-    y: 300,
   },
   show: {
     opacity: 1,
-    y: 0,
     transition: {
       staggerChildren: 0.25,
-      duration: 1,
+      duration: 0.5,
       when: 'beforeChildren',
     },
   },
   exit: {
     opacity: 0,
-    y: 300,
-    transition: { ease: 'easeInOut', duration: 1 },
+    transition: { ease: 'easeOut', duration: 0.5 },
   },
 };
 
@@ -23,7 +20,7 @@ export const titleAnim = {
   hidden: { y: 200 },
   show: {
     y: 0,
-    transition: { type: 'tween', ease: 'circOut', duration: 0.75 },
+    transition: { type: 'tween', ease: 'easeOut', duration: 0.75 },
   },
 };
 
@@ -31,7 +28,7 @@ export const fade = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
-    transition: { type: 'tween', ease: 'circOut', duration: 1, delay: 0.25 },
+    transition: { type: 'tween', ease: 'easeOut', duration: 1, delay: 0.5 },
   },
 };
 
@@ -42,9 +39,9 @@ export const photoAnim = {
     opacity: 1,
     transition: {
       type: 'tween',
-      ease: 'circOut',
+      ease: 'easeOut',
       duration: 1,
-      delay: 0.75,
+      delay: 0.5,
     },
   },
 };
@@ -54,5 +51,42 @@ export const lineAnim = {
   show: {
     width: '100%',
     transition: { duration: 1 },
+  },
+};
+
+export const slider = {
+  hidden: { x: '-130%', skew: '45deg' },
+  show: {
+    x: '100%',
+    skew: '0deg',
+    transition: { type: 'tween', ease: 'easeOut', duration: 1 },
+  },
+};
+export const sliderContainer = {
+  hidden: {
+    opacity: 1,
+  },
+  show: {
+    opacity: 1,
+
+    transition: {
+      staggerChildren: 0.15,
+      ease: 'easeOut',
+      duration: 1,
+    },
+  },
+};
+export const movieContainer = {
+  hidden: {
+    opacity: 1,
+  },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+      ease: 'easeOut',
+      duration: 1,
+      when: 'beforeChildren',
+    },
   },
 };
