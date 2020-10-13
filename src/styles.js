@@ -12,6 +12,7 @@ export const About = styled(motion.div)`
 `;
 export const Description = styled(motion.div)`
   flex: 1;
+  z-index: 2;
   padding-right: 5rem;
   h2 {
     font-weight: lighter;
@@ -19,6 +20,7 @@ export const Description = styled(motion.div)`
 `;
 export const Image = styled(motion.div)`
   flex: 1;
+  z-index: 2;
   overflow: hidden;
   img {
     width: 100%;
