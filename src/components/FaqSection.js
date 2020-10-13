@@ -2,7 +2,7 @@ import React from 'react';
 import { About } from '../styles';
 import styled from 'styled-components';
 import Toggle from './Toggle';
-import { motion } from 'framer-motion';
+import { motion, AnimateSharedLayout } from 'framer-motion';
 
 const FaqSection = () => {
   return (
@@ -10,9 +10,9 @@ const FaqSection = () => {
       <h2>
         Any Questions? <span>FAQ</span>
       </h2>
-      <Toggle>
-        <motion.div className="question">
-          <h4>How Do I Start?</h4>
+
+      <AnimateSharedLayout>
+        <Toggle title="How Do I Start?">
           <div className="answer">
             <p>Lorem ipsum dolor sit amet.</p>
             <p>
@@ -20,12 +20,8 @@ const FaqSection = () => {
               reprehenderit perferendis sunt magni dolores ratione.
             </p>
           </div>
-          <div className="faq-line"></div>
-        </motion.div>
-      </Toggle>
-      <Toggle>
-        <div className="question">
-          <h4>What Products do you offer?</h4>
+        </Toggle>
+        <Toggle title="What Products do you offer?">
           <div className="answer">
             <p>Lorem ipsum dolor sit amet.</p>
             <p>
@@ -33,31 +29,26 @@ const FaqSection = () => {
               reprehenderit perferendis sunt magni dolores ratione.
             </p>
           </div>
-          <div className="faq-line"></div>
-        </div>
-      </Toggle>
-      <div className="question">
-        <h4>Diferrent Payment Methods</h4>
-        <div className="answer">
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit,
-            reprehenderit perferendis sunt magni dolores ratione.
-          </p>
-        </div>
-        <div className="faq-line"></div>
-      </div>
-      <div className="question">
-        <h4>Daily Schedule</h4>
-        <div className="answer">
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit,
-            reprehenderit perferendis sunt magni dolores ratione.
-          </p>
-        </div>
-        <div className="faq-line"></div>
-      </div>
+        </Toggle>
+        <Toggle title="Diferrent Payment Methods">
+          <div className="answer">
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit,
+              reprehenderit perferendis sunt magni dolores ratione.
+            </p>
+          </div>
+        </Toggle>
+        <Toggle title="Daily Schedule">
+          <div className="answer">
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit,
+              reprehenderit perferendis sunt magni dolores ratione.
+            </p>
+          </div>
+        </Toggle>
+      </AnimateSharedLayout>
     </Faq>
   );
 };
@@ -69,17 +60,13 @@ const Faq = styled(About)`
   }
   h2 {
     font-weight: lighter;
-    padding-bottom: 2rem;
+    padding-bottom: 4rem;
   }
   .faq-line {
     background: #cccccc;
     height: 0.2rem;
     margin: 2rem 0rem;
     width: 100%;
-  }
-  .question {
-    padding: 3rem 0rem;
-    cursor: pointer;
   }
   .answer {
     padding: 2rem 0rem;
