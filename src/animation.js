@@ -78,7 +78,7 @@ export const sliderContainer = {
 };
 export const movieContainer = {
   hidden: {
-    opacity: 1,
+    opacity: 0,
   },
   show: {
     opacity: 1,
@@ -87,6 +87,19 @@ export const movieContainer = {
       ease: 'easeOut',
       duration: 1,
       when: 'beforeChildren',
+    },
+  },
+};
+
+export const reveal = {
+  hidden: { opacity: 0, scale: 0.9 },
+  show: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      type: 'tween',
+      ease: 'easeOut',
+      duration: 1,
     },
   },
 };
