@@ -54,6 +54,7 @@ const StyledNav = styled.nav`
   position: sticky;
   top: 0;
   z-index: 10;
+
   ul {
     display: flex;
     list-style: none;
@@ -71,6 +72,18 @@ const StyledNav = styled.nav`
     font-family: 'Lobster', cursive;
     font-weight: lighter;
   }
+  @media (max-width: 1500px) {
+    flex-direction: column;
+    padding: 2rem 0rem;
+    ul {
+      padding: 2rem;
+      justify-content: space-around;
+      width: 100%;
+      li {
+        padding: 0;
+      }
+    }
+  }
 `;
 
 const Line = styled(motion.div)`
@@ -80,6 +93,9 @@ const Line = styled(motion.div)`
   position: absolute;
   bottom: -80%;
   left: 60%;
+  @media (max-width: 1500px) {
+    left: 0%;
+  }
 `;
 
 export default Nav;

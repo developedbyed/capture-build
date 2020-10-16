@@ -51,6 +51,10 @@ const ContactStyle = styled(motion.div)`
   padding: 5rem 10rem;
   color: #353535;
   min-height: 90vh;
+  @media (max-width: 1500px) {
+    padding: 2rem;
+    font-size: 1rem;
+  }
 `;
 const Title = styled.div`
   margin-bottom: 4rem;
@@ -61,6 +65,9 @@ const Circle = styled.div`
   width: 5rem;
   height: 5rem;
   background: #353535;
+  @media (max-width: 1500px) {
+    display: none;
+  }
 `;
 
 const Social = styled(motion.div)`
@@ -68,6 +75,12 @@ const Social = styled(motion.div)`
   align-items: center;
   h2 {
     margin: 2rem;
+  }
+  @media (max-width: 1500px) {
+    h2 {
+      margin: 1rem 0rem;
+      font-size: 2.5rem;
+    }
   }
 `;
 
