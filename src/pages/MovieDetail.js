@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import { MovieState } from '../movieState';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { pageAnimation, slideUp } from '../animation';
+import { pageAnimation } from '../animation';
 import ScrollTop from '../components/ScrollTop';
 
 const MovieDetail = () => {
